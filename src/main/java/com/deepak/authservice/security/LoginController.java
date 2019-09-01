@@ -3,6 +3,7 @@ package com.deepak.authservice.security;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,4 +38,12 @@ public class LoginController {
 		 return new UserInfo(); 
 		
 	}
+	
+	@GetMapping("/check")
+	public String checkStatus() {
+		return "Service is up";
+	}
+	
+	
+	
 }
